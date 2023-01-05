@@ -309,6 +309,6 @@ class PrettyDioLogger extends Interceptor {
           break;
       }
     }
-    logPrint('$_codeColor$object\x1B[0m');
+    logPrint('$_codeColor$object${(_codeColor ?? '').isEmpty ? '' : '\x1B[0m'}');
   }
 }
